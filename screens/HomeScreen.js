@@ -14,21 +14,21 @@ import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    header: null,
+    title: 'Portable Cooling Systems',
   };
 
   render() {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
+          <View style={styles.emergencyContainer}>
             <Image
               source={
                 __DEV__
-                  ? require('../assets/images/robot-dev.png')
+                  ? require('../assets/images/1x/emergency.png')
                   : require('../assets/images/robot-prod.png')
               }
-              style={styles.welcomeImage}
+              style={styles.emergencyImage}
             />
           </View>
 
@@ -113,14 +113,14 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingTop: 30,
   },
-  welcomeContainer: {
+  emergencyContainer: {
     alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
+    marginTop: 40,
+    marginBottom: 40,
   },
-  welcomeImage: {
-    width: 100,
-    height: 80,
+  emergencyImage: {
+    width: 150,
+    height: 120,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,

@@ -29,7 +29,7 @@ export default class HomeScreen extends React.Component {
               source={
                 __DEV__
                   ? require("../assets/images/1x/emergency.png")
-                  : require("../assets/images/robot-prod.png")
+                  : require("../assets/images/1x/emergency.png")
               }
               style={styles.emergencyImage}
             />
@@ -39,7 +39,7 @@ export default class HomeScreen extends React.Component {
               source={
                 __DEV__
                   ? require("../assets/images/1x/sales.png")
-                  : require("../assets/images/robot-prod.png")
+                  : require("../assets/images/1x/sales.png")
               }
               style={styles.salesImage}
             />
@@ -48,7 +48,7 @@ export default class HomeScreen extends React.Component {
               source={
                 __DEV__
                   ? require("../assets/images/1x/heatload.png")
-                  : require("../assets/images/robot-prod.png")
+                  : require("../assets/images/1x/heatload.png")
               }
               style={styles.heatloadImage}
             />
@@ -58,7 +58,7 @@ export default class HomeScreen extends React.Component {
               source={
                 __DEV__
                   ? require("../assets/images/1x/rentals.png")
-                  : require("../assets/images/robot-prod.png")
+                  : require("../assets/images/1x/rentals.png")
               }
               style={styles.salesImage}
             />
@@ -74,7 +74,7 @@ export default class HomeScreen extends React.Component {
               source={
                 __DEV__
                   ? require("../assets/images/1x/location.png")
-                  : require("../assets/images/robot-prod.png")
+                  : require("../assets/images/1x/location.png")
               }
               style={styles.locationImage}
             />

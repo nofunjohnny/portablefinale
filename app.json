@@ -24,6 +24,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Portable Cooling Systems - Rental App",
+    "githubUrl": "https://github.com/nofunjohnny/portablefinale"
   }
 }

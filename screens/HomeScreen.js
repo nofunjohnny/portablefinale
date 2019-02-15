@@ -6,8 +6,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
-  backgroundImage
+  View
 } from "react-native";
 import { WebBrowser } from "expo";
 import call from "react-native-phone-call";
@@ -31,71 +30,77 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView
-          style={styles.container}
+          style={styles.contentContainer}
           contentContainerStyle={styles.contentContainer}
-        ><View style={styles.welcomeContainer}>
-        <TouchableOpacity
-          style={styles.emergencyContainer}
-          onPress={this.call}
-          ><Image
-              source={
-                __DEV__
-                  ? require("../assets/images/1x/emergency.png")
-                  : require("../assets/images/1x/emergency.png")
-              }
-              style={styles.emergencyImage}
-            /></TouchableOpacity>
-            </View>
-          
-          </ScrollView>
-          <View style={styles.rowoneContainer}>
+        >
+          <View style={styles.emergencyContainer}>
+            <TouchableOpacity
+              style={styles.contentContainer}
+              onPress={this.call}
+            >
+              <Image
+                source={
+                  __DEV__
+                    ? require("../assets/images/1x/emergency.png")
+                    : require("../assets/images/1x/emergency.png")
+                }
+                style={styles.emergencyImage}
+              />
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.container1}>
             <Image
               source={
                 __DEV__
                   ? require("../assets/images/1x/sales.png")
                   : require("../assets/images/1x/sales.png")
               }
-              style={styles.salesImage}
+              style={styles.image1}
             />
-
+          
+          
             <Image
               source={
                 __DEV__
                   ? require("../assets/images/1x/heatload.png")
                   : require("../assets/images/1x/heatload.png")
               }
-              style={styles.heatloadImage}
+              style={styles.image1}
             />
-          </View>
-          <View style={styles.rowtwoContainer}>
+</View> 
+
+<View style={styles.container2}>
             <Image
               source={
                 __DEV__
                   ? require("../assets/images/1x/rentals.png")
                   : require("../assets/images/1x/rentals.png")
               }
-              style={styles.salesImage}
+              style={styles.image2}
             />
-            <Image
-              source={
-                __DEV__
-                  ? require("../assets/images/1x/home.png")
-                  : require("../assets/images/robot-prod.png")
-              }
-              style={styles.locationImage}
-            />
-            <Image
-              source={
-                __DEV__
-                  ? require("../assets/images/1x/location.png")
-                  : require("../assets/images/1x/location.png")
-              }
-              style={styles.locationImage}
-            />
-          </View>
-          </View>
-    )
-            }
+          
+
+          
+
+
+
+              <Image
+                source={
+                  __DEV__
+                    ? require("../assets/images/1x/location.png")
+                    : require("../assets/images/1x/location.png")
+                }
+                style={styles.image2}
+              />            
+              
+              </View>
+      
+          
+        </ScrollView>
+      </View>
+    );
+  }
   _maybeRenderDevelopmentModeWarning() {
     if (__DEV__) {
       const learnMoreButton = (
@@ -135,6 +140,8 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-between",
     backgroundColor: "#1DAAD6"
   },
   developmentModeText: {
@@ -145,63 +152,46 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   contentContainer: {
-    paddingTop: 15,
+    paddingTop: 5,
     flexDirection: "column"
   },
   emergencyContainer: {
     alignItems: "center",
-    marginTop: 40,
-    marginBottom: 40
+    marginTop: 0,
+    marginBottom: 25
   },
   emergencyImage: {
-    width: 150,
-    height: 120,
-    resizeMode: "contain",
-    marginTop: 3
+    width: 200,
+    height: 200,
+    resizeMode: "contain"
   },
-  rowoneContainer: {
-    alignItems: "flex-end",
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    marginTop: 10,
-    marginBottom: 10
+  container1: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
-  rowtwoContainer: {
-    alignItems: "flex-end",
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    marginTop: 40
+  image1: {
+    width: 170,
+    height: 170,
+    margin: 5
   },
-  salesImage: {
-    width: 150,
-    height: 120,
-    resizeMode: "contain",
-    marginTop: 3
+  container2: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
-  locationContainer: {
-    alignItems: "center",
-    marginTop: 40,
-    marginBottom: 40
+  image2: {
+    width: 170,
+    height: 170,
+    margin: 5
   },
-  locationImage: {
-    width: 150,
-    height: 120,
-    resizeMode: "contain",
-    marginTop: 30
+  container3: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
-  heatloadContainer: {
-    alignItems: "center",
-    marginTop: 40,
-    marginBottom: 40
-  },
-  heatloadImage: {
-    width: 150,
-    height: 120,
-    resizeMode: "contain",
-    marginTop: 30
-  },
+  
+  
   getStartedContainer: {
     alignItems: "center",
     marginHorizontal: 50

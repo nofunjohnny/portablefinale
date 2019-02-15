@@ -10,12 +10,21 @@ import {
   backgroundImage
 } from "react-native";
 import { WebBrowser } from "expo";
-
+import call from "react-native-phone-call";
 import { MonoText } from "../components/StyledText";
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: "Portable Cooling Systems"
+  };
+  call = () => {
+    //handler to make a call
+    const args = {
+      number: "7136617077",
+      prompt: false
+    };
+
+    call(args).catch(console.error);
   };
 
   render() {
@@ -24,17 +33,21 @@ export default class HomeScreen extends React.Component {
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}
-        >
-          <View style={styles.emergencyContainer}>
-            <Image
+        ><View style={styles.welcomeContainer}>
+        <TouchableOpacity
+          style={styles.emergencyContainer}
+          onPress={this.call}
+          ><Image
               source={
                 __DEV__
                   ? require("../assets/images/1x/emergency.png")
                   : require("../assets/images/1x/emergency.png")
               }
               style={styles.emergencyImage}
-            />
-          </View>
+            /></TouchableOpacity>
+            </View>
+          
+          </ScrollView>
           <View style={styles.rowoneContainer}>
             <Image
               source={
@@ -80,11 +93,9 @@ export default class HomeScreen extends React.Component {
               style={styles.locationImage}
             />
           </View>
-        </ScrollView>
-      </View>
-    );
-  }
-
+          </View>
+    )
+            }
   _maybeRenderDevelopmentModeWarning() {
     if (__DEV__) {
       const learnMoreButton = (

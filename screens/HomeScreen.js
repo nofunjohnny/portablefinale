@@ -6,7 +6,8 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
+  backgroundImage
 } from "react-native";
 import { WebBrowser } from "expo";
 
@@ -43,8 +44,8 @@ export default class HomeScreen extends React.Component {
               }
               style={styles.salesImage}
             />
-            
-                        <Image
+
+            <Image
               source={
                 __DEV__
                   ? require("../assets/images/1x/heatload.png")
@@ -78,12 +79,7 @@ export default class HomeScreen extends React.Component {
               }
               style={styles.locationImage}
             />
-            
           </View>
-
-          
-            
-          
         </ScrollView>
       </View>
     );
@@ -128,7 +124,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: "#1DAAD6"
   },
   developmentModeText: {
     marginBottom: 20,
@@ -139,7 +135,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 15,
-    flexDirection: 'column'
+    flexDirection: "column"
   },
   emergencyContainer: {
     alignItems: "center",
@@ -150,31 +146,28 @@ const styles = StyleSheet.create({
     width: 150,
     height: 120,
     resizeMode: "contain",
-    marginTop: 3,
-    
+    marginTop: 3
   },
   rowoneContainer: {
     alignItems: "flex-end",
-    flex:1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
     marginTop: 10,
     marginBottom: 10
   },
   rowtwoContainer: {
     alignItems: "flex-end",
-    flex:1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
     marginTop: 40
-    
   },
   salesImage: {
     width: 150,
     height: 120,
     resizeMode: "contain",
     marginTop: 3
-    
   },
   locationContainer: {
     alignItems: "center",
@@ -186,7 +179,6 @@ const styles = StyleSheet.create({
     height: 120,
     resizeMode: "contain",
     marginTop: 30
-    
   },
   heatloadContainer: {
     alignItems: "center",
@@ -197,7 +189,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 120,
     resizeMode: "contain",
-    marginTop: 30,
+    marginTop: 30
   },
   getStartedContainer: {
     alignItems: "center",
@@ -210,7 +202,7 @@ const styles = StyleSheet.create({
     color: "rgba(96,100,109, 0.8)"
   },
   codeHighlightContainer: {
-    backgroundColor: "rgba(0,0,0,0.05)",
+    backgroundColor: "#1DAAD6",
     borderRadius: 3,
     paddingHorizontal: 4
   },
@@ -230,14 +222,15 @@ const styles = StyleSheet.create({
         shadowColor: "black",
         shadowOffset: { height: -3 },
         shadowOpacity: 0.1,
-        shadowRadius: 3
+        shadowRadius: 3,
+        backgroundColor: "#1DAAD6"
       },
       android: {
         elevation: 20
       }
     }),
     alignItems: "center",
-    backgroundColor: "#fbfbfb",
+    backgroundColor: "#1DAAD6",
     paddingVertical: 20
   },
   tabBarInfoText: {

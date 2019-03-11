@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Image, StyleSheet, View, Button, Text } from "react-native";
-import call from 'react-native-phone-call';
+import call from "react-native-phone-call";
 import {
   Container,
   Header,
   Col,
   Card,
   CardItem,
-  Thumbnail, 
+  Thumbnail,
   Icon,
   Left,
   Body,
@@ -23,8 +23,8 @@ export default class HomeScreen extends React.Component {
   call = () => {
     //handler to make a call
     const args = {
-      number: '7133359852',
-      prompt: false,
+      number: "7133359852",
+      prompt: false
     };
 
     call(args).catch(console.error);
@@ -32,22 +32,60 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <Container>
-        
-        <Touchable
-          style={styles.container}
-        
-          onPress={this.call}
-        >
+        <Touchable style={styles.container} onPress={this.call}>
           <View>
             <View>
               <Image
                 source={require("../assets/images/calling.png")}
                 resizeMode="contain"
                 fadeDuration={0}
-                style={{ width: 128, height: 128, marginTop: 1, alignSelf: "center", }}
+                style={{
+                  width: 128,
+                  height: 128,
+                  marginTop: 1,
+                  alignSelf: "center"
+                }}
               />
               <Text style={styles.optionText}>24 Hour Teachnical Support</Text>
               <Text style={styles.optionText}>*Click Phone Above to Call*</Text>
+            </View>
+          </View>
+        </Touchable>
+        <Touchable style={styles.container}>
+          <View>
+            <View>
+              <Image
+                source={require("../assets/images/sale.png")}
+                resizeMode="contain"
+                fadeDuration={0}
+                style={{
+                  width: 128,
+                  height: 128,
+                  marginTop: 1,
+                  alignSelf: "center"
+                }}
+              />
+              <Text style={styles.optionText}>Sale</Text>
+              <Text style={styles.optionText}>Click to access Sales</Text>
+            </View>
+          </View>
+        </Touchable>
+        <Touchable style={styles.container}>
+          <View>
+            <View>
+              <Image
+                source={require("../assets/images/rental.png")}
+                resizeMode="contain"
+                fadeDuration={0}
+                style={{
+                  width: 128,
+                  height: 128,
+                  marginTop: 1,
+                  alignSelf: "center"
+                }}
+              />
+              <Text style={styles.optionText}>Sale</Text>
+              <Text style={styles.optionText}>Click to access Sales</Text>
             </View>
           </View>
         </Touchable>
@@ -60,7 +98,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 0,
     paddingTop: 5,
-    justifyContent: 'center',
+    justifyContent: "center",
     flexDirection: "row"
   },
   optionsTitleText: {
@@ -73,7 +111,7 @@ const styles = StyleSheet.create({
     marginRight: 9
   },
   option: {
-    backgroundColor: "#fdfdfd",
+    backgroundColor: "#00ffffff",
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -82,7 +120,7 @@ const styles = StyleSheet.create({
   optionText: {
     fontSize: 15,
     marginTop: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
     flexDirection: "row"
   }
 });

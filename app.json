@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "portablefinale",
-    "slug": "portablefinale",
+    "name": "portablecoolingsys",
+    "slug": "portablecoolingsystemspcs",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -24,8 +24,6 @@
     ],
     "ios": {
       "supportsTablet": true
-    },
-    "description": "Portable Cooling Systems - Rental App",
-    "githubUrl": "https://github.com/nofunjohnny/portablefinale"
+    }
   }
 }

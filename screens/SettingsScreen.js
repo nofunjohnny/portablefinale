@@ -1,16 +1,15 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
-
-export default class LinksScreen extends React.Component {
+export default class SettingsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Sales',
+    title: 'Rentals',
   };
 
   render() {
     return (
       <View>
-        <Text style={styles.title}>SALES</Text>
+        <Text style={styles.title}>RENTALS</Text>
       </View>
     );
   }

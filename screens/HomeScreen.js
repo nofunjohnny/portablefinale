@@ -51,12 +51,14 @@ export default class HomeScreen extends React.Component {
             </View>
           </View>
         </Touchable>
-        <Touchable style={styles.container}>
+        <Touchable style={styles.container}
+        onPress={() => this.props.navigation.navigate('Links')}>
           <View>
             <View>
               <Image
                 source={require("../assets/images/sale.png")}
                 resizeMode="contain"
+                onPress={() => this.props.navigation.navigate('Links')}
                 fadeDuration={0}
                 style={{
                   width: 128,
@@ -70,7 +72,8 @@ export default class HomeScreen extends React.Component {
             </View>
           </View>
         </Touchable>
-        <Touchable style={styles.container}>
+        <Touchable style={styles.container}
+        onPress={() => this.props.navigation.navigate('Settings')}>
           <View>
             <View>
               <Image

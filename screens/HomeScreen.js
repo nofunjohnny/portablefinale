@@ -46,13 +46,13 @@ export default class HomeScreen extends React.Component {
                   alignSelf: "center"
                 }}
               />
-              <Text style={styles.optionText}>24 Hour Teachnical Support</Text>
-              <Text style={styles.optionText}>*Click Phone Above to Call*</Text>
+              <Text style={styles.optionText}>Click to Call</Text>
+              
             </View>
           </View>
         </Touchable>
         <Touchable style={styles.container}
-        onPress={() => this.props.navigation.navigate('Links')}>
+        onPress={() => this.props.navigation.navigate('Sales')}>
           <View>
             <View>
               <Image
@@ -67,13 +67,13 @@ export default class HomeScreen extends React.Component {
                   alignSelf: "center"
                 }}
               />
-              <Text style={styles.optionText}>Sale</Text>
-              <Text style={styles.optionText}>Click to access Sales</Text>
+              <Text style={styles.optionText}>Sales</Text>
+              
             </View>
           </View>
         </Touchable>
         <Touchable style={styles.container}
-        onPress={() => this.props.navigation.navigate('Settings')}>
+        onPress={() => this.props.navigation.navigate('Rentals')}>
           <View>
             <View>
               <Image
@@ -87,8 +87,7 @@ export default class HomeScreen extends React.Component {
                   alignSelf: "center"
                 }}
               />
-              <Text style={styles.optionText}>Sale</Text>
-              <Text style={styles.optionText}>Click to access Sales</Text>
+              <Text style={styles.optionText}>Rentals</Text>
             </View>
           </View>
         </Touchable>
@@ -124,6 +123,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginTop: 1,
     justifyContent: "center",
-    flexDirection: "row"
+    flexDirection: "row",
+    alignSelf: 'center',
   }
 });

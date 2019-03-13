@@ -25,6 +25,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "description": "Application built for Portable Cooling Systems to call technical support with one click.",
+    "githubUrl": "https://github.com/nofunjohnny/portablefinale"
   }
 }

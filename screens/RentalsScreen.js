@@ -5,6 +5,7 @@ import {
   Content,
   Form,
   Text,
+  Textarea,
   Item,
   Input,
   Label,
@@ -62,11 +63,11 @@ export default class SettingsScreen extends React.Component {
               placeholder="Select your Product"
               textStyle={{ color: "#0099ff" }}
               itemStyle={{
-                backgroundColor: "#d3d3d3",
+                backgroundColor: "#fefefe",
                 marginLeft: 0,
                 paddingLeft: 10
               }}
-              itemTextStyle={{ color: '#788ad2' }}
+              itemTextStyle={{ color: '#0099ff' }}
               style={{ width: undefined }}
               selectedValue={this.state.selected}
               onValueChange={this.onValueChange.bind(this)}
@@ -95,11 +96,11 @@ export default class SettingsScreen extends React.Component {
               placeholder="Choose Voltage"
               textStyle={{ color: "#0099ff" }}
               itemStyle={{
-                backgroundColor: "#d3d3d3",
+                backgroundColor: "#fefefe",
                 marginLeft: 0,
                 paddingLeft: 10
               }}
-              itemTextStyle={{ color: '#788ad2' }}
+              itemTextStyle={{ color: '#0099ff' }}
               style={{ width: undefined }}
               selectedValue={this.state.selected}
               onValueChange={this.onValueChange.bind(this)}
@@ -116,11 +117,11 @@ export default class SettingsScreen extends React.Component {
               placeholder="Select Usage"
               textStyle={{ color: "#0099ff" }}
               itemStyle={{
-                backgroundColor: "#d3d3d3",
+                backgroundColor: "#fefefe",
                 marginLeft: 0,
                 paddingLeft: 10
               }}
-              itemTextStyle={{ color: '#788ad2' }}
+              itemTextStyle={{ color: '#0099ff' }}
               style={{ width: undefined }}
               selectedValue={this.state.selected}
               onValueChange={this.onValueChange.bind(this)}
@@ -130,7 +131,10 @@ export default class SettingsScreen extends React.Component {
               <Picker.Item label="IT ROOM" value="key2" />
               <Picker.Item label="OTHER" value="key2" />
             </Picker>
-            <Button large success>
+            <Content padder>
+              <Textarea rowSpan={5} bordered placeholder="Message" onChange={e => this.setState({ message: e.target.value})} />
+            </Content>
+            <Button large info>
               <Text>Submit</Text>
             </Button>
           </Form>

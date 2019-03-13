@@ -14,28 +14,21 @@ import {
   Icon,
   H1
 } from "native-base";
-import axios from 'axios';
 
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
     title: "Sales"
   };
-  
-  state = {
-    name: '',
-    company: '',
-    phone: '',
-    email: '',
-    product: '',
-    message: '',
-    _sent: false,
-    get sent() {
-      return this._sent;
-    },
-    set sent(value) {
-      this._sent = value;
-    },
-    buttonText: 'Submit',
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected: undefined
+    };
+  }
+  onValueChange(value) {
+    this.setState({
+      selected: value
+    });
   }
 
   render() {
@@ -67,13 +60,13 @@ export default class LinksScreen extends React.Component {
                 placeholder="Select your Product"
                 iosIcon={<Icon name="arrow-down" />}
                 placeholder="Select your Product"
-                textStyle={{ color: "#5cb85c" }}
+                textStyle={{ color: "#0099ff" }}
                 itemStyle={{
                   backgroundColor: "#fefefe",
                   marginLeft: 0,
                   paddingLeft: 10
                 }}
-                itemTextStyle={{ color: "#788ad2" }}
+                itemTextStyle={{ color: "#0099ff" }}
                 style={{ width: undefined }}
                 selectedValue={this.state.selected}
                 onValueChange={this.onValueChange.bind(this)}
@@ -90,11 +83,11 @@ export default class LinksScreen extends React.Component {
               <Input onChange={e => this.setState({ product: e.target.value})} />
             </Item>
 
-            <Content padder><Text>Submit</Text>
+            <Content padder>
               <Textarea rowSpan={5} bordered placeholder="Message" onChange={e => this.setState({ message: e.target.value})} />
             </Content>
-            <Button large success type="submit">
-            { this.state.buttonText }
+            <Button large info>
+              <Text>Submit</Text>
             </Button>
           </Form>
         </Content>

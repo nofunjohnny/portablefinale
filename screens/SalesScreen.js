@@ -14,21 +14,28 @@ import {
   Icon,
   H1
 } from "native-base";
+import axios from 'axios';
 
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
     title: "Sales"
   };
-  constructor(props) {
-    super(props);
-    this.state = {
-      selected: undefined
-    };
-  }
-  onValueChange(value) {
-    this.setState({
-      selected: value
-    });
+  
+  state = {
+    name: '',
+    company: '',
+    phone: '',
+    email: '',
+    product: '',
+    message: '',
+    _sent: false,
+    get sent() {
+      return this._sent;
+    },
+    set sent(value) {
+      this._sent = value;
+    },
+    buttonText: 'Submit',
   }
 
   render() {
@@ -83,11 +90,11 @@ export default class LinksScreen extends React.Component {
               <Input onChange={e => this.setState({ product: e.target.value})} />
             </Item>
 
-            <Content padder>
-              <Textarea rowSpan={5} bordered placeholder="Message" />
+            <Content padder><Text>Submit</Text>
+              <Textarea rowSpan={5} bordered placeholder="Message" onChange={e => this.setState({ message: e.target.value})} />
             </Content>
             <Button large success type="submit">
-              <Text>Submit</Text>
+            { this.state.buttonText }
             </Button>
           </Form>
         </Content>

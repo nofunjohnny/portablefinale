@@ -40,8 +40,8 @@ export default class HomeScreen extends React.Component {
                 resizeMode="contain"
                 fadeDuration={0}
                 style={{
-                  width: 128,
-                  height: 128,
+                  width: 200,
+                  height: 200,
                   marginTop: 1,
                   alignSelf: "center"
                 }}

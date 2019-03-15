@@ -49,7 +49,7 @@ export default class RentalsScreen extends React.Component {
               <Input />
             </Item>
             <Item fixedLabel>
-              <Label>Phone::</Label>
+              <Label>Phone:</Label>
               <Input />
             </Item>
             <Item fixedLabel>

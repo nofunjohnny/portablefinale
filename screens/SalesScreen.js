@@ -12,7 +12,8 @@ import {
   Button,
   Picker,
   Icon,
-  H1
+  H1,
+  H3
 } from "native-base";
 
 export default class LinksScreen extends React.Component {
@@ -35,23 +36,24 @@ export default class LinksScreen extends React.Component {
     return (
       <Container>
         <H1>Sale Form</H1>
+        <H3>Request for Pricing Proposal</H3>
 
         <Content>
           <Form onSubmit={ (e) => this.formSubmit(e)}>
             <Item fixedLabel>
-              <Label>Name</Label>
+              <Label>Name:</Label>
               <Input onChange={e => this.setState({ name: e.target.value})} />
             </Item>
             <Item fixedLabel>
-              <Label>Company</Label>
+              <Label>Company:</Label>
               <Input onChange={e => this.setState({ company: e.target.value})} />
             </Item>
             <Item fixedLabel>
-              <Label>Phone</Label>
+              <Label>Phone:</Label>
               <Input onChange={e => this.setState({ name: e.target.value})} />
             </Item>
             <Item fixedLabel>
-              <Label>Email</Label>
+              <Label>Email:</Label>
               <Input onChange={e => this.setState({ email: e.target.value})} />
             </Item>
             <Item fixedLabel>
@@ -78,7 +80,7 @@ export default class LinksScreen extends React.Component {
                 <Picker.Item label="BIOKOOL" value="key4" />
                 <Picker.Item label="KIB" value="key5" />
                 <Picker.Item label="KPAC" value="key6" />
-                <Picker.Item label="KPo" value="key7" />
+                <Picker.Item label="KPO" value="key7" />
               </Picker>
               <Input onChange={e => this.setState({ product: e.target.value})} />
             </Item>

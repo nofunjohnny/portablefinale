@@ -18,6 +18,7 @@ import Touchable from "react-native-platform-touchable";
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: "Portable Cooling Systems"
+    
   };
 
   call = () => {
@@ -47,18 +48,19 @@ export default class HomeScreen extends React.Component {
                 }}
               />
               <Text style={styles.optionText}>Click to Call</Text>
-              
             </View>
           </View>
         </Touchable>
-        <Touchable style={styles.container}
-        onPress={() => this.props.navigation.navigate('Sales')}>
+        <Touchable
+          style={styles.container}
+          onPress={() => this.props.navigation.navigate("Sales")}
+        >
           <View>
             <View>
               <Image
                 source={require("../assets/images/sale.png")}
                 resizeMode="contain"
-                onPress={() => this.props.navigation.navigate('Links')}
+                onPress={() => this.props.navigation.navigate("Links")}
                 fadeDuration={0}
                 style={{
                   width: 128,
@@ -68,12 +70,13 @@ export default class HomeScreen extends React.Component {
                 }}
               />
               <Text style={styles.optionText}>Sales</Text>
-              
             </View>
           </View>
         </Touchable>
-        <Touchable style={styles.container}
-        onPress={() => this.props.navigation.navigate('Rentals')}>
+        <Touchable
+          style={styles.container}
+          onPress={() => this.props.navigation.navigate("Rentals")}
+        >
           <View>
             <View>
               <Image
@@ -113,7 +116,7 @@ const styles = StyleSheet.create({
     marginRight: 9
   },
   option: {
-    backgroundColor: "#00ffffff",
+    backgroundColor: "#adadad",
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -124,6 +127,6 @@ const styles = StyleSheet.create({
     marginTop: 1,
     justifyContent: "center",
     flexDirection: "row",
-    alignSelf: 'center',
+    alignSelf: "center"
   }
 });

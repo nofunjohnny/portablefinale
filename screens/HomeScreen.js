@@ -32,7 +32,7 @@ export default class HomeScreen extends React.Component {
   };
   render() {
     return (
-      <Container>
+      <Container style={ {backgroundColor: "#dbdbdb"}}>
         <Touchable style={styles.container} onPress={this.call}>
           <View>
             <View>

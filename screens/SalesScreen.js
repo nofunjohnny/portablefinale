@@ -34,7 +34,7 @@ export default class LinksScreen extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container style={ {backgroundColor: "#dbdbdb"}}>
         <H1>Sale Form</H1>
         <H3>Request for Pricing Proposal</H3>
 
